@@ -10,6 +10,11 @@ const resolvers = {
 			}
 		},
 	},
+	Mutation:{
+		async addUser(){
+			
+		}
+	}
 };
 
 module.exports = { resolvers };

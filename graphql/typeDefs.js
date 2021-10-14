@@ -8,8 +8,14 @@ const typeDefs = gql`
 		username: String!
 		createdAt: String!
 	}
+	type AddUser{
+		
+	}
 	type Query {
 		getUsers: [User!]!
+	}
+	type Mutation {
+		addUser(addUser:AddUser): User!
 	}
 `;
 module.exports = { typeDefs };
