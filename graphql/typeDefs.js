@@ -4,18 +4,18 @@ const typeDefs = gql`
 	type User {
 		id: ID!
 		email: String!
-		token: String!
 		username: String!
 		createdAt: String!
 	}
-	type AddUser{
-		
+	input AddUser{
+		email:String!,
+		username:String!,
 	}
 	type Query {
 		getUsers: [User!]!
 	}
 	type Mutation {
-		addUser(addUser:AddUser): User!
+		addUser(body: AddUser!): User!
 	}
 `;
 module.exports = { typeDefs };
